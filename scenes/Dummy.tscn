@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpr61crhkvyov"]
+
+[ext_resource type="Texture2D" uid="uid://b8btit1xcffvl" path="res://assets/kenney_platformercharacters/PNG/Adventurer/Poses/adventurer_cheer1.png" id="1_a4dod"]
+[ext_resource type="Script" path="res://scenes/dummy.gd" id="1_hv5kj"]
+[ext_resource type="AudioStream" uid="uid://dio7i07dmlhwq" path="res://assets/music/kenney_music-jingles/Audio/8-Bit jingles/jingles_NES00.ogg" id="3_0wi02"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihl36"]
+size = Vector2(87, 95)
+
+[node name="Dummy" type="RigidBody2D"]
+script = ExtResource("1_hv5kj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 8.5)
+shape = SubResource("RectangleShape2D_ihl36")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_a4dod")
+
+[node name="crash" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_0wi02")

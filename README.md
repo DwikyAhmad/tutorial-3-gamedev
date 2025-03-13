@@ -1,5 +1,9 @@
 # Dwiky Ahmad Megananta - 2206829206
 
+### Implementasi Tutorial 5
+
+Untuk mengerjakan tutorial 5 ini, saya untuk tutorialnya saya mengganti node sprite menjadi yang animated lalu menambahkan masing-masing animasi menggunakan spritesheet dari karakter yang digunakan pada tutorial 3 sebelumnya dan memberikan script play berdasarkan statenya, lalu pada tugas mandiri tutorial 5 ini, saya membuat objek baru menggunakan assets yang berbeda (https://aamatniekss.itch.io/fantasy-knight-free-pixelart-animated-character), lalu saya gunakan juga Audio pada scene node char tersebut untuk SFX dan BGM, lalu untuk interaksi dengan objek lainnya saya membuat sebuah objek dummy baru rigidbody yang akan menerima pergeseran apabila dia di dalam area main char dan main char tersebut sedang menyerang, untuk masuk ke area penyerangan dan bisa dideteksi saya menggunakan area2D, jika area2D mendeteksi dummy character dan kita memencet spasi, maka dummy character tersebut akan bergeser dan menjalankan sfx.
+
 Referensi Implementasi Crouch dan Change Sprite: https://youtu.be/Hpbn-w7H2V4?si=ozGmLMAE5B97WlRR
 
 ## Latihan Mandiri: Eksplorasi Mekanika Pergerakan

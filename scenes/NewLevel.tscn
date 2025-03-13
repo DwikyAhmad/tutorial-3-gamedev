@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dju751rh3j2au"]
+
+[ext_resource type="PackedScene" uid="uid://bhl2piupi8kkt" path="res://scenes/Ground.tscn" id="1_jvkxy"]
+[ext_resource type="PackedScene" uid="uid://dukhy2muh3smx" path="res://scenes/NewPlayer.tscn" id="2_axw67"]
+[ext_resource type="AudioStream" uid="uid://blif4l32sjapq" path="res://assets/music/790338__crashbulb__sci-fi-horror-spectral-chorus-transition-soundscape.wav" id="3_ua25o"]
+[ext_resource type="PackedScene" uid="uid://cpr61crhkvyov" path="res://scenes/Dummy.tscn" id="4_w0igi"]
+
+[node name="NewLevel" type="Node2D"]
+
+[node name="Ground" parent="." instance=ExtResource("1_jvkxy")]
+position = Vector2(562, 556)
+
+[node name="Ground2" parent="." instance=ExtResource("1_jvkxy")]
+position = Vector2(210, 556)
+
+[node name="Ground3" parent="." instance=ExtResource("1_jvkxy")]
+position = Vector2(912, 556)
+
+[node name="NewPlayer" parent="." instance=ExtResource("2_axw67")]
+position = Vector2(198, 478)
+
+[node name="Dummy" parent="." instance=ExtResource("4_w0igi")]
+position = Vector2(769, 462)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ua25o")
+volume_db = 2.473
+autoplay = true

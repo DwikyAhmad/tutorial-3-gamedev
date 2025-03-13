@@ -1,14 +1,50 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5w2hrh78joyl"]
+[gd_scene load_steps=8 format=3 uid="uid://c5w2hrh78joyl"]
 
 [ext_resource type="Script" path="res://scenes/Player.gd" id="1_l85ns"]
-[ext_resource type="Texture2D" uid="uid://dg3q4a7elmavw" path="res://assets/kenney_platformercharacters/PNG/Adventurer/Poses/adventurer_idle.png" id="2_bkr3b"]
+[ext_resource type="Texture2D" uid="uid://cwuhbkedqndp6" path="res://assets/kenney_platformercharacters/Vector/adventurer_vector.svg" id="2_d58mk"]
 [ext_resource type="Shape2D" uid="uid://bfkpf5s05efxi" path="res://resources/PlayerStanding.tres" id="3_gw3rr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwgji"]
+atlas = ExtResource("2_d58mk")
+region = Rect2(0, 0, 80, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v70a3"]
+atlas = ExtResource("2_d58mk")
+region = Rect2(0, 110, 80, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08yy4"]
+atlas = ExtResource("2_d58mk")
+region = Rect2(80, 110, 80, 110)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wndum"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwgji")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v70a3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08yy4")
+}],
+"loop": true,
+"name": &"jalan_kanan",
+"speed": 5.0
+}]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_l85ns")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_bkr3b")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wndum")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8)
